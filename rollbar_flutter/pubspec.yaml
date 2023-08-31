@@ -4,6 +4,7 @@ version: 1.5.0
 homepage: https://www.rollbar.com
 documentation: https://docs.rollbar.com/docs/flutter#flutter
 repository: https://github.com/rollbar/rollbar-flutter
+publish_to: none
 
 environment:
   sdk: '>=2.17.0 <4.0.0'
@@ -15,8 +16,14 @@ dependencies:
   meta: ^1.7.0
   connectivity_plus: ^4.0.0
   sqlite3_flutter_libs: ^0.5.12
-  rollbar_common: ^1.1.0
-  rollbar_dart: ^1.3.0
+  rollbar_common:
+    git:
+      url: https://github.com/hejmi/rollbar-flutter.git
+      path: rollbar_common
+  rollbar_dart:
+    git:
+      url: https://github.com/hejmi/rollbar-flutter.git
+      path: rollbar_dart
 
 dependency_overrides:
   rollbar_common:
